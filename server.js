@@ -4,11 +4,11 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/prson-jpwm'));
+app.use(express.static('/dist/personal'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname+'/dist/prson-jpwm/index.html'));
+res.sendFile(path.join('/dist/personal/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
